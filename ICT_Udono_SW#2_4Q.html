@@ -1,0 +1,73 @@
+<<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Calculator Project
+    </title>
+</head>
+<body>
+    <h1>Calculator: Arithmetic Operators</h1>
+     <form>
+        <label for="multi-line">x:</label>
+        <textarea id="num1" name="num1" rows="1" cols="10"></textarea>
+    </form>
+         <form>
+        <label for="multi-line">y:</label>
+        <textarea id="num2" name="num2" rows="1" cols="10"></textarea>
+    </form>
+<div>
+<button class="btn btn-success btn-lg" onclick="plus()">SUM</button>
+<button class="btn btn-warning btn-lg" onclick="minus()">SUBTRACT</button>
+<br>
+<button class="btn btn-info btn-lg" onclick="multi()">MULTIPLY</button>
+<button class="btn btn-danger btn-lg" onclick="div()">DIVIDE</button>
+</div>
+<script type="text/javascript">
+        function plus(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+                var sum = Number(num1) + Number(num2);
+                                            window.alert("The sum is: "+ sum)
+            if (isNaN(num1) || isNaN(num2)){
+                window.alert("Invalid input. Please try again");
+                return;
+            }
+
+        }
+        function minus(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+                var diff = Number(num1) - Number(num2);
+            window.alert("The sum is: "+ diff)
+
+                        if (isNaN(num1) || isNaN(num2)){
+                window.alert("Invalid input. Please try again");
+                return;
+            }
+        }
+        function multi(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+                var multi = Number(num1) * Number(num2);
+            window.alert("The sum is: "+ multi)
+                        if (isNaN(num1) || isNaN(num2)){
+                window.alert("Invalid input. Please try again");
+                return;
+            }
+        }
+        function div(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+                var div = Number(num1) / Number(num2);
+            window.alert("The sum is: "+ div)
+                        if (isNaN(num1) || isNaN(num2)){
+                window.alert("Invalid input. Please try again");
+                return;
+            }
+        }
+
+    </script>
+</body>
+</html>
